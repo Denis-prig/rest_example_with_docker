@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "contacts")
 public class Contact1 {
@@ -23,6 +22,13 @@ public class Contact1 {
 
     @ManyToOne
     private User12 user;
+
+    public Contact1(Long id, String type, String data, User12 user) {
+        this.id = id;
+        this.type = type;
+        this.data = data;
+        this.user = user;
+    }
 
     // Конструктор по умолчанию, геттеры, сеттеры и т.д.
 }

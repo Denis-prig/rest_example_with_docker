@@ -46,7 +46,7 @@ public class EntityServices {
 
     public String nameAndMan() {
         Name n = new Name(1L, "Denis");
-        Man m = new Man(2L, n.getName());
+        Man m = new Man(2L, "RRRR");
 
         return null;
     }
